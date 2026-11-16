@@ -63,4 +63,5 @@ sales-web/
 - **문의처**: `index.html`의 `#contact` 섹션 — 이메일 버튼(`mailto:`), 전화 버튼(`tel:`), 그리고 아래 `cta-fallback`의 이메일·번호 텍스트를 함께 바꿔 주세요.
 - **영상 추가**: `videos/`에 파일을 넣고 `index.html`의 갤러리 카드(`<article class="card" data-tags="...">`)를 하나 복사해 `src`·라벨을 고칩니다. 필터 태그는 `allref`(전지점 대표) / `compare`(전후 비교) / `after`(10회차) / `before`(1회차) 입니다.
 - **캐시 갱신**: `index.html`의 `styles.css?v=2` / `app.js?v=2` 처럼 버전 숫자를 올려 주세요. GitHub Pages가 CSS·JS를 10분간 캐시하기 때문에, 숫자를 올리지 않으면 수정이 바로 반영되지 않습니다.
+- **미리보기 썸네일 재생성**: `python3 voi-creative-studio/tools/make-og-image.py` (Pillow 필요, 첫 실행 때 Pretendard 폰트를 내려받아 캐시) → `og-image.jpg`를 덮어씁니다.
 - **검증**: `python3 voi-creative-studio/tools/validate-sales-web.py` — 20개 파일 존재, `src` 경로 일치, 원본과 바이트 동일, 경로 상대경로 여부를 한 번에 확인합니다.
