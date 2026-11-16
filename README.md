@@ -1,5 +1,8 @@
 # VOI Creative Studio · 영업용 레퍼런스 페이지
 
+> **라이브 주소**: https://snow196830-stack.github.io/VOI/
+> 저장소: https://github.com/snow196830-stack/VOI (public, `main` 브랜치 루트 → GitHub Pages 배포)
+
 경락·에스테틱·웨딩관리샵 원장님께 보내는 영업용 정적 페이지입니다.
 빌드 도구 없이 `index.html` + `styles.css` + `app.js` + `videos/` 만으로 동작하고, GitHub Pages에 그대로 올릴 수 있습니다.
 
