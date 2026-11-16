@@ -153,11 +153,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .hero h1 .hl {
   position: relative; white-space: nowrap; color: var(--ink);
-}
-.hero h1 .hl::after {
-  content: ""; position: absolute; left: -2px; right: -2px; bottom: 4px; height: 34%;
-  background: linear-gradient(90deg, rgba(180,133,122,.28), rgba(180,133,122,.14));
-  border-radius: 2px; z-index: -1;
+  background: linear-gradient(180deg, transparent 60%, rgba(180, 133, 122, .30) 60%);
+  padding: 0 3px; border-radius: 3px;
 }
 .hero-lead {
   margin-top: 24px; max-width: 56ch; color: var(--muted);
@@ -195,7 +192,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .reel { margin: 0; }
 .reel-grid-2 {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(16px, 2.6vw, 32px); max-width: 720px;
+  gap: clamp(16px, 2.6vw, 32px); max-width: 760px; margin-inline: auto;
 }
 .reel-frame {
   position: relative;
@@ -426,6 +423,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .hero { padding-top: 40px; }
   .hero h1 { font-size: clamp(27px, 8.4vw, 36px); letter-spacing: -.045em; }
   .hero h1 br { display: none; }
+  .hero h1 .hl { white-space: normal; }
   .hero-lead { font-size: 14.5px; margin-top: 18px; }
   .hero-actions { margin-top: 26px; }
   .hero-actions .btn { flex: 1 1 auto; }
