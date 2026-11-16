@@ -11,6 +11,8 @@ sales-web/
 ├── index.html      페이지 본문 (모든 카피·섹션)
 ├── styles.css      디자인 (아이보리/차콜/로즈골드·세이지)
 ├── app.js          필터 탭 · 동시 재생 방지 · 스크롤 등장
+├── og-image.jpg    카톡·DM 미리보기 썸네일 (1200×630)
+├── robots.txt      검색엔진 수집 차단 (`Disallow: /`)
 ├── .nojekyll       GitHub Pages에서 Jekyll 처리 생략 (videos 폴더 그대로 서빙)
 └── videos/         영상 20편 (영문 소문자 파일명, 약 186MB)
 ```
@@ -24,22 +26,28 @@ sales-web/
 | --- | --- | --- |
 | `all-01.mp4` | 전지점 배포용 1 | 전지점 대표 |
 | `all-02.mp4` | 전지점 배포용2 | 전지점 대표 |
-| `ilsan-1.mp4` / `ilsan-10.mp4` | 일산 이달나라 1회차 / 10회차 | 전후 비교 |
-| `yongin-1.mp4` / `yongin-10.mp4` | 용인 김예빈 1회차 / 10회차 | 전후 비교 |
-| `kondae-1.mp4` / `kondae-10.mp4` | 건대 김소희 1회차 / 10회차 | 전후 비교 |
-| `busan-1.mp4` / `busan-10.mp4` | 부산 구시윤 1회차 / 10회차 | 전후 비교 |
-| `jamsil-10.mp4` | 잠실 강민주 10회차 | 10회차 결과 |
-| `busan-kim-10.mp4` | 부산 김영숙 10회차 | 10회차 결과 |
-| `cheongdam-yu-10.mp4` | 청담 유승연 10회차 | 10회차 결과 |
-| `apgujeong-10.mp4` | 압구정 안소연 10회차 | 10회차 결과 |
-| `magok-10.mp4` | 마곡 서인영 10회차 | 10회차 결과 |
-| `cheongdam-gwak-10.mp4` | 청담 곽은희 10회차 | 10회차 결과 |
+| `ilsan-1.mp4` / `ilsan-10.mp4` | 일산 이OO (전후 비교) 1회차 / 10회차 | 전후 비교 |
+| `yongin-1.mp4` / `yongin-10.mp4` | 용인 김OO 1회차 / 10회차 | 전후 비교 |
+| `kondae-1.mp4` / `kondae-10.mp4` | 건대 김OO 1회차 / 10회차 | 전후 비교 |
+| `busan-1.mp4` / `busan-10.mp4` | 부산 구OO 1회차 / 10회차 | 전후 비교 |
+| `jamsil-10.mp4` | 잠실 강OO 10회차 | 10회차 결과 |
+| `busan-kim-10.mp4` | 부산 김OO 10회차 | 10회차 결과 |
+| `cheongdam-yu-10.mp4` | 청담 유OO 10회차 | 10회차 결과 |
+| `apgujeong-10.mp4` | 압구정 안OO 10회차 | 10회차 결과 |
+| `magok-10.mp4` | 마곡 서OO 10회차 | 10회차 결과 |
+| `cheongdam-gwak-10.mp4` | 청담 곽OO 10회차 | 10회차 결과 |
 | `dogok-1.mp4` | 도곡 1회차 | 1회차 도입 |
-| `gwangju-yang-1.mp4` | 광주 양현나 1회차 | 1회차 도입 |
-| `ilsan-lee-1.mp4` | 일산 이성령 1회차 | 1회차 도입 |
-| `gwangju-lee-1.mp4` | 광주 이혜영 1회차 | 1회차 도입 |
+| `gwangju-yang-1.mp4` | 광주 양OO 1회차 | 1회차 도입 |
+| `ilsan-lee-1.mp4` | 일산 이OO (1회차 도입) | 1회차 도입 |
+| `gwangju-lee-1.mp4` | 광주 이OO 1회차 | 1회차 도입 |
 
 영상은 전부 720×1280(9:16 세로), 15~31초입니다.
+
+## 검색 노출 · 공유 미리보기
+
+- **검색엔진 수집 차단**: `index.html`의 `<meta name="robots" content="noindex, nofollow">` 와 `robots.txt`(`Disallow: /`) 로 막아 둡니다. 링크를 직접 받은 사람에게만 열리는 페이지로 유지합니다.
+- **카톡·DM 미리보기**: `<head>`의 `og:`·`twitter:` 메타태그와 `og-image.jpg`(1200×630 JPEG)를 사용합니다. 썸네일을 바꿀 때는 1200×630 비율과 파일명을 그대로 두세요(메타태그 URL 고정).
+- **모델 이름 표기**: 실명 대신 `지점 + 성OO` (예: `일산 이OO`, `청담 곽OO`)만 씁니다. 같은 지점·같은 성이 겹치면 뒤에 `(전후 비교)` / `(1회차 도입)`을 붙여 구분합니다. 새 사례를 추가할 때도 실명은 넣지 않습니다.
 
 ## GitHub Pages 배포
 
